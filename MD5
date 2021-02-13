@@ -1,6 +1,6 @@
-b58d0f28d87698f0ff77a4b6d529b0d6 *DESCRIPTION
+dc1043e30ad8a3661f316e85fbf44b1c *DESCRIPTION
 dc21c19f0d6968ee25d441b2cf46017d *NAMESPACE
-cc2c40bfdea3390ed9259e941bb84f22 *NEWS.md
+9b5e496ca9db3b64b664088e8be917cb *NEWS.md
 0d23a5015982d980b142b420f4af50f1 *README.md
 d7505c6e8b516bb4fb9df0f97c3a291d *build/vignette.rds
 edfebb4c75e6e061ce9165de1b7f0292 *data/carnivores.rda
@@ -24,8 +24,8 @@ c4453956c78c0cb0be8f2bca652e8d9d *data/weaver.rda
 4d82d7443e65b1109ff2c2c3f53fe9f5 *data/zebra_bacteria.rda
 77c15595fcdbcea8841af1f296226d58 *inst/doc/Biostatistics.R
 75a48248f16cd122a11a52c8aa9da527 *inst/doc/Biostatistics.Rmd
-09110a5e9c5f8c41769242f93c15282e *inst/doc/Biostatistics.html
-8dfda28466bfe6c7bcbc5b710a1285dc *inst/tutorials/00_Introduction/Introduction.Rmd
+e57399acde5f131768b6914f12f02af4 *inst/doc/Biostatistics.html
+a356241340b0b518a1e68ff4df2f04c6 *inst/tutorials/00_Introduction/Introduction.Rmd
 01f8655092dabb66f8a3f6e230a9040d *inst/tutorials/01_Frequency_histograms/Frequency_histograms.Rmd
 3accdb51585a3ab1b4c02c2a2e8b21bf *inst/tutorials/01_Frequency_histograms/longevity.rda
 869b056603161348872572bde95e80ad *inst/tutorials/01_Frequency_histograms/parrots2.rda
@@ -42,7 +42,7 @@ c6213541d8e17864e5f3d064a3b29a05 *inst/tutorials/04_Scatterplots/quolls.rda
 b71903fa33166521f79b3fb693f6b240 *inst/tutorials/05_Sampling_distributions/Sampling_distributions.Rmd
 b3b93d783cb8050d74582558b13b8f47 *inst/tutorials/05_Sampling_distributions/images/chinstrap.jpg
 46c6bc4215d88dc428d6e9ad7b6a24fe *inst/tutorials/06_Standard_errors/Standard_errors.Rmd
-94971acb2849c1da568b7485cfdb4443 *inst/tutorials/07_Confidence_intervals/Confidence_intervals.Rmd
+d6393d8017d6135522d36ed524dd3660 *inst/tutorials/07_Confidence_intervals/Confidence_intervals.Rmd
 b2f6fe2ed46a7b47af0def799ca13afd *inst/tutorials/08_CIs_comparing_two_means/CIs_for_the_difference_between_two_means.Rmd
 6ffc76ca97777ef53110fd80c78c367d *inst/tutorials/09_Paired_sample_t_tests/Basic_Analysis_1_Paired_sample_t_tests.Rmd
 788d6abe03b3a389d0bc0020c1fab785 *inst/tutorials/09_Paired_sample_t_tests/images/Ophiocordyceps.png
