@@ -34,11 +34,11 @@ There are two ways of running these tutorials. The easy way assumes you are usin
 
 If you would rather run your tutorial in a separate browser window then you can use the `run_tutorial()` function from the learnr package. You need to specify the name of the tutorial and the package, so 
 
-`learnr::run_tutorial("02 Descriptive statistics", package = "Biostatistics")`
+`learnr::run_tutorial("02_Descriptive_statistics", package = "Biostatistics")`
 
 will run the Descriptive Statistics tutorial and 
 
-`learnr::run_tutorial("17 Linear models 5 Multiple Regression", package = "Biostatistics")`
+`learnr::run_tutorial("17_Multiple_Regression", package = "Biostatistics")`
 
 will run the Multiple Regression tutorial. In my experience the first method, with the Tutorial pane, seems more stable and sometimes tutorials won't render using `run_tutorial()` for reasons that are not clear.
 
@@ -46,25 +46,24 @@ will run the Multiple Regression tutorial. In my experience the first method, wi
 
 The tutorials currently in the package are:
 
-00 Introduction                                             
-01 Frequency histograms                                     
-02 Descriptive statistics                                   
-03 Boxplots                                                 
-04 Scatterplots                                             
-05 Sampling_distributions                                   
-06 Standard_errors                                          
-07 Confidence intervals                                     
-08 Confidence intervals for the difference between two means
-09 Paired-sample t-tests                                    
-10 Two sample t-tests                                       
-11 Chi-square tests                                         
-12 Correlation                                              
-13 Linear models 1 Single factor ANOVA                      
-14 Linear models 2 Linear Regression                        
-15 Linear models 3 Model assumptions and diagnostics        
-16 Linear models 4 Multi factor ANOVA                       
-17 Linear models 5 Multiple regression                      
-18 Linear models 6 Factors and continuous variables         
-19 Linear models 7 Model selection
+00_Introduction                                             
+01_Frequency_histograms                                     
+02_Descriptive_statistics                                   
+03_Boxplots                                                 
+04_Scatterplots                                             
+05_Sampling_distributions                                   
+06_Standard_errors                                          
+07_Confidence_intervals                                     
+08_CIs_comparing_two_means
+09_Paired_sample_t_tests                                    
+10_Two_sample_t_tests                                       
+11_Chi_square_tests                                         
+12_Correlation                                              
+13_Single_factor_ANOVA                      
+14_Linear_Regression                        
+15_Model_assumptions        
+16_Multi_factor_ANOVA                       
+17_Multiple_regression                      
+18_Factors_and_continuous_variables         
+19_Model_selection
 
-## Datasets used in this package

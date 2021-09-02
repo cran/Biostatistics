@@ -1,6 +1,6 @@
-afd7ba15869dfca74d308662f24ef065 *DESCRIPTION
+f45c57ab7d27a0dc9d9b01aafd3d2943 *DESCRIPTION
 dc21c19f0d6968ee25d441b2cf46017d *NAMESPACE
-168dab2ff27f5b5052a5b47cc53672d0 *NEWS.md
+57e52106dec67fbad8999f6055dff8c8 *NEWS.md
 0d23a5015982d980b142b420f4af50f1 *README.md
 403674bc56edda962c86d84a1da63100 *build/vignette.rds
 edfebb4c75e6e061ce9165de1b7f0292 *data/carnivores.rda
@@ -23,8 +23,8 @@ c4453956c78c0cb0be8f2bca652e8d9d *data/weaver.rda
 0edd89e54a0f2e39af7cddfb6914a2fe *data/worldbank.rda
 4d82d7443e65b1109ff2c2c3f53fe9f5 *data/zebra_bacteria.rda
 77c15595fcdbcea8841af1f296226d58 *inst/doc/Biostatistics.R
-75a48248f16cd122a11a52c8aa9da527 *inst/doc/Biostatistics.Rmd
-e57399acde5f131768b6914f12f02af4 *inst/doc/Biostatistics.html
+812435507d3b88fc0718068bf845ed98 *inst/doc/Biostatistics.Rmd
+e0ca0f20f77bceadcdcaa390bc9c7023 *inst/doc/Biostatistics.html
 a356241340b0b518a1e68ff4df2f04c6 *inst/tutorials/00_Introduction/Introduction.Rmd
 01f8655092dabb66f8a3f6e230a9040d *inst/tutorials/01_Frequency_histograms/Frequency_histograms.Rmd
 3accdb51585a3ab1b4c02c2a2e8b21bf *inst/tutorials/01_Frequency_histograms/longevity.rda
@@ -96,4 +96,4 @@ b337e4dc86dbaaeb88d9a8af20468086 *man/ragwort.Rd
 d47104485a106b3c8c8b2e6be24221c4 *man/weaver.Rd
 80044c507caa1d61fdc55c324933aa97 *man/worldbank.Rd
 661d4b56e8de8baf9241d2679cebde77 *man/zebra_bacteria.Rd
-75a48248f16cd122a11a52c8aa9da527 *vignettes/Biostatistics.Rmd
+812435507d3b88fc0718068bf845ed98 *vignettes/Biostatistics.Rmd
