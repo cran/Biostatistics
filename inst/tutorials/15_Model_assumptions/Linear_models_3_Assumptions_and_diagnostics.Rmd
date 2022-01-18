@@ -16,6 +16,8 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA, fig.width = 5, fig.height = 5)
 
 load("ragwort.rda")
 
+ragwort$inoculum <- as.factor(ragwort$inoculum)
+
 load("gabon_diversity.rda")
 ```
 

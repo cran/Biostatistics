@@ -1,7 +1,7 @@
 Package: Biostatistics
 Type: Package
 Title: Statistics Tutorials for Biologists
-Version: 1.0.3
+Version: 1.0.4
 Author: Rob Knell
 Maintainer: Rob Knell <r.knell@qmul.ac.uk>
 Description: Tutorials for statistics, aimed at biological scientists. 
@@ -19,7 +19,7 @@ License: GPL-3
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2021-09-01 15:34:50 UTC; ugbt794
+Packaged: 2022-01-18 14:04:19 UTC; ugbt794
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2021-09-02 11:10:05 UTC
+Date/Publication: 2022-01-18 14:22:43 UTC

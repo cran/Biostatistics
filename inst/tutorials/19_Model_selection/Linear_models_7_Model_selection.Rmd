@@ -129,7 +129,7 @@ model1 <- lm(RA_Birds ~ Distance +
 The first thing to do is to check our diagnostic plots. We'll just look at the first two for the sake of simplicity -remember you can do this by adding the argument `which = 1:2` to the `plot()` function.
 
 
-```{r gabon5a, exercise = TRUE, exercise.setup = "gabon-setup"}
+```{r gabon5a, exercise = TRUE, exercise.setup = "gabon_setup"}
 
 ```
 
@@ -141,7 +141,7 @@ Have a look at these plots. What do you see?
 
 ```{r diagnostics-quiz1, echo=FALSE}
   question(
-    "which statements do you agree with? More than one answer can be correct.",
+    "Which statements do you agree with? More than one answer can be correct.",
     answer("The qq-plot shows positive skew", message = "Answer 1: this would be the case if the qqplot had a concave shape"),
     answer("The residuals versus fitted values plot has a hint of curvature but this is probably due to one datapoint with a large negative residual", correct = TRUE),
     answer("It's not possible to draw any conclusions because the sample size is too small"),
@@ -155,7 +155,7 @@ Have a look at these plots. What do you see?
 
 The diagnostics mostly look OK aside from the one data point (8) with a somewhat large negative residual. We'll proceed with our model simplification and see if this remains the case.
 
-<details>
+</details>
 
 ## Model simplification
 
@@ -163,7 +163,7 @@ Now we will proceed with simplifying our model to generate a minimal adequate mo
 
 Finally, because the rendering engine that formats these tutorials has a thing for trying to make tables pretty that is sometimes actually a hindrance, please enclose your `drop1()` function call in a `print()` function. This is to make the output that you see look like the standard R output and is just something you need to do within the tutorial.
 
-```{r gabon6, exercise = TRUE, exercise.setup = "gabon-setup"}
+```{r gabon6, exercise = TRUE, exercise.setup = "gabon_setup"}
 
 
 ```
@@ -253,7 +253,7 @@ These look very similar to before. That pesky data point 8 still has a larger ne
 
 Now that we have arrived at our minimal adequate model, we need to understand what it is telling us. This is where the `summary()` function and the coefficients table becomes important.
 
-```{r gabon9, exercise = TRUE, exercise.setup = "gabon-setup"}
+```{r gabon9, exercise = TRUE, exercise.setup = "gabon_setup"}
 
 
 ```
@@ -266,9 +266,9 @@ Have a look at the coefficients table. All of the remaining explanatory variable
 
 ```{r cofficients-quiz1, echo=FALSE}
   question(
-    "which statements do you agree with? More than one answer can be correct.",
+    "Which statements do you agree with? More than one answer can be correct.",
     answer("The relative abundance of birds increases with the number of households in the nearest village", message = "Not quite: see the answer to the next question"),
-    answer("One the effect of distance has been controlled for, the relative abundance of birds increases with the number of households in the nearest village", correct = TRUE),
+    answer("Once the effect of distance has been controlled for, the relative abundance of birds increases with the number of households in the nearest village", correct = TRUE),
     answer("Once the effects of distance and size of the nearest village have been partialled out of the data, the relative abundance of birds declines with increasing species richness of vegetation", correct = TRUE),
     answer(
       "For every kilometer further to the nearest village, the relative abundance of birds decreases by 1.39", correct = TRUE),

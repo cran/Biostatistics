@@ -283,7 +283,7 @@ Hopefully you've been able to get a good idea of what the model is telling us bu
 
 -   The model overall can be thought of a fitting two separate lines to the relationship between log male mass and log brain mass, one for monogynous males and one for polygynous males.
 
--   The interaction term defines the difference in slopes between the two groups defined by th factor levels. Because the interaction term is statistically significant we can interpret this as telling us that there is a significant difference in slopes.
+-   The interaction term defines the difference in slopes between the two groups defined by the factor levels. Because the interaction term is statistically significant we can interpret this as telling us that there is a significant difference in slopes.
 
 </details>
 
@@ -357,6 +357,9 @@ All looks good. What we can do now is to plot the data and draw in the lines rep
 
 ```{r pinniped_plot_setup, echo = FALSE}
 pinniped$Mate_type <- as.factor(pinniped$Mate_type)
+
+P1 <- lm(formula = log(Male_brain_g) ~ log(Male_mass_Kg) * Mate_type, 
+    data = pinniped)
 
 # Generate predicted values and confidence 
 # intervals for Mate_type = "mono"
@@ -467,7 +470,7 @@ As we've discussed in earlier tutorials, independence of data is a fundamental a
 pinniped[which(pinniped$Male_mass_Kg < 100),]
 ```
 
-Six of these are from the genus *Phoca*, and all of these have monogynous males. What's more, these are all the species from the genus *Phoca* on the dataset. There's an obvious capacity here for apparent patterns in the dataset to be driven by evolutionary history rather than other factors. It could simply be the case that the common ancestor of the genus *Phoca* was small and monogynous, and that any apparent tendency for smaller males to be monogynous is a consequence of that rather than any evolutionary tendency towards small size in monogynous species. This is not something that we can correct for in this analysis here, but there are techniques for correcting for phylogenetic non-independence such as Phylogenetic Generalised Least Squares or PGLS. Yhis is what Fitzpatrick et al. used in their paper: I'm pleased to say that the fundamental conclusions were unchanged.
+Six of these are from the genus *Phoca*, and all of these have monogynous males. What's more, these are all the species from the genus *Phoca* on the dataset. There's an obvious capacity here for apparent patterns in the dataset to be driven by evolutionary history rather than other factors. It could simply be the case that the common ancestor of the genus *Phoca* was small and monogynous, and that any apparent tendency for smaller males to be monogynous is a consequence of that rather than any evolutionary tendency towards small size in monogynous species. This is not something that we can correct for in this analysis here, but there are techniques for correcting for phylogenetic non-independence such as Phylogenetic Generalised Least Squares or PGLS. This is what Fitzpatrick et al. used in their paper: I'm pleased to say that the fundamental conclusions were unchanged.
 
 ## Exercise 2: Insulin-like peptides and beetle weaponry
 
@@ -754,6 +757,8 @@ We'll get back to that when we look at the interpretation of the model in more d
 As usual we'll just look at the first two diagnostic plots.
 
 ```{r beetle_setup3}
+gnatocerus2 <- gnatocerus[-24, ]
+
 B1 <- lm(ML ~ EW * treatment,
          data = gnatocerus2)
 ```
@@ -852,7 +857,7 @@ To visualise our data with lines fitted for each level of treatment using ggplot
 ```{r}
 library(ggplot2)
 
-p1 <- ggplot(data = gnatocerus2) +  # tell iw which dtaa frame to use
+p1 <- ggplot(data = gnatocerus2) +  # tell it which data frame to use
   aes(x = EW, y = ML, colour = treatment) + # specify the 'aesthetics'
   geom_point() + # add layer with points plotted
   geom_smooth(method= "lm", se = FALSE) + # add lines

@@ -179,7 +179,7 @@ Have a think about the diagnostic plots and try to answer the questions.
     answer("It is not clear but there is some indication of negative skew", message = "Answer 2. There's nothing here to indicate negative skew, which would show as more very negative residuals and a convex curve of points on the qq-plot"),
     answer("The qq-plot shows that there is some positive skew in the residuals", correct = TRUE),
     answer(
-      "The qq-plot shows that the relationship between at least one of the explanatory variables and the response variable is non-linear", message = "Answer 4. The qq-plot can only tell you about the distribution of the residuals, not about whether the shape of the relationship between response and epxlanatory variables is linear",
+      "The qq-plot shows that the relationship between at least one of the explanatory variables and the response variable is non-linear", message = "Answer 4. The qq-plot can only tell you about the distribution of the residuals, not about whether the shape of the relationship between response and explanatory variables is linear",
       answer("The presence of some residuals with high positive values which are not mirrored in the negative residuals indicates that there might be some positive skew in the residuals", correct = TRUE)
     )
 )
@@ -445,7 +445,7 @@ Finally, we need to interpret these results in terms of the biology of the syste
 
 **Warning** This example gets quite complex and technical. 
 
-In 2017 Tom Houslay and co-workers^1^ published a study of the relationship between, among other things, condition, resource availability (food quality) and sexual signalling (calling song) in the decorated cricket, *Gryllodes sigillatus*. Male crickets "sing" to attract females by rubbing specialised areas of their wings together, an activity which is energetically costly. As part of their study, Houslay *et al.* fed freshly eclosed^2^ adult male crickets on synthetic food with a 1:8 protein to carbohydrate ratio but which caried in total nutritional content from 12% to 84%, with the amount of nutritional content increasing in 12% increments between these limits. The crickets were weighed at the start of the experiment and again after a week, and the amount of time they spent singing during the week was recorded.
+In 2017 Tom Houslay and co-workers^1^ published a study of the relationship between, among other things, condition, resource availability (food quality) and sexual signalling (calling song) in the decorated cricket, *Gryllodes sigillatus*. Male crickets "sing" to attract females by rubbing specialised areas of their wings together, an activity which is energetically costly. As part of their study, Houslay *et al.* fed freshly eclosed^2^ adult male crickets on synthetic food with a 1:8 protein to carbohydrate ratio but which varied in total nutritional content from 12% to 84%, with the amount of nutritional content increasing in 12% increments between these limits. The crickets were weighed at the start of the experiment and again after a week, and the amount of time they spent singing during the week was recorded.
 
 The dataframe is loaded as `cricket_song`. We'll begin by checking its structure.
 
@@ -567,7 +567,7 @@ hist(cricket_song$Song_week1,
      breaks = 10)
 ```
 
-Is this a problem? It's important to understand that there's no requirement for explanatory variables to follow, for example, a normal distribution: this only applies to the residuals of the response variable once an appropriate model has been fitted. Strong skew like this, however, tends to obscure any relationship between the response and the epxlanatory variable, and those few data points with very large values are likely to have a disproportionate effect n the overall model fit. It's best in this case to transform these data to reduce the skew, and with this degree of skew then a log-transformation is approriate. There are some zeros in the data so we will add a constant, in this case 1, to our variable before transforming it. Let's see what this does:
+Is this a problem? It's important to understand that there's no requirement for explanatory variables to follow, for example, a normal distribution: this only applies to the residuals of the response variable once an appropriate model has been fitted. Strong skew like this, however, tends to obscure any relationship between the response and the explanatory variable, and those few data points with very large values are likely to have a disproportionate effect n the overall model fit. It's best in this case to transform these data to reduce the skew, and with this degree of skew then a log-transformation is approriate. There are some zeros in the data so we will add a constant, in this case 1, to our variable before transforming it. Let's see what this does:
 
 ```{r}
 hist(log(cricket_song$Song_week1+1), 
@@ -638,12 +638,12 @@ Hopefully you've got a highly significant interaction term. If you haven't then 
 
 The next thing we need to do is to check the diagnostic plots. As usual we're really mostly interested in the first two so use the `which = 1:2` argument.
 
-```{r echo = FALSE, prepare-model1}
+```{r prepare-model1, echo = FALSE}
 C1 <- lm(Delta_smi ~ Diet * log(Song_week1 +1),
          data = cricket_song)
 ```
 
-```{r cricket_diagnostics1, exercise = TRUE, exercise.setup = "prepare_model1"}
+```{r cricket_diagnostics1, exercise = TRUE, exercise.setup = "prepare-model1"}
 
 
 ```
@@ -669,7 +669,7 @@ question("Which of the following statements about the residuals versus fitted va
        answer("datapoints 442, 447 & 565 have the largest absolute residual values but there is nothing to indicate that there is anything anomalous about them", correct = TRUE),
        answer("The plot shows no indication of heteroskedasticity", correct = TRUE),
        answer("Based on this plot we can conclude that there is no problem with non-independence between data points", message = "Answer 4. Diagnostic plots such as this cannot tell us about independence or otherwise of data points. This is something that you have to consider when thinking about study design."),
-       answer("There is a slight tendency for the residuals for intermediate fitted values to have more positive values than those for low or high fitted values, indicate that the relationship between the epxlanatory variables and the response variable might be curved to some degree", correct = TRUE)
+       answer("There is a slight tendency for the residuals for intermediate fitted values to have more positive values than those for low or high fitted values, indicate that the relationship between the explanatory variables and the response variable might be curved to some degree", correct = TRUE)
 ),
 
 question("Which of the following statements about the qq-plot of residuals is correct?",
@@ -714,9 +714,14 @@ Not quite... but it's much better and we can probably not worry about this any m
 
 ## Interpreting the model
 
-Our final model is quite a complex one and will need a fair amount of interpretation. Let's have a look at the summary output.
+Our final model, C2, with the quadratic term, is quite a complex one and will need a fair amount of interpretation. Let's have a look at the summary output.
 
-```{r cricket_model_summary, exercise = TRUE}
+```{r prepare-C2, echo = FALSE}
+C2 <- lm(Delta_smi ~ Diet + I(Diet^2) + log(Song_week1 +1) + Diet:log(Song_week1 +1),
+         data = cricket_song)
+```
+
+```{r cricket_model_summary, exercise = TRUE, exercise.setup = "prepare-C2"}
 
 
 ```

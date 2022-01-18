@@ -63,7 +63,8 @@ Let's visualise the root mass data using a boxplot.
 ```{r fig.cap = "**Figure 1** Boxplot showing root mass data for each treatment level"}
 
 # Change the order of the levels in inoculum so that they make sense
-# ragwort$inoculum <- factor(ragwort$inoculum, levels = c("Sterile", "Whole_soil", "1000um", "20um", "5um", "0.2um"))
+ragwort$inoculum <-
+	factor(ragwort$inoculum, levels = c("1000µm", "20µm", "5µm", "0.2µm"))
   
 # Plot a boxplot             
 boxplot(root_mass ~ inoculum,
